@@ -1,9 +1,14 @@
-  {
-    "name": "Docker Build Environment",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-    "features": {
-      "docker-in-docker": "latest"
+{
+  "name": "Docker Build Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "version": "latest",
+      "installDockerBuildx": true,
     },
-    "postCreateCommand": "sudo service docker start"
-  }
-
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  },
+  "postCreateCommand": "sudo apt update && sudo apt install socat"
+}
