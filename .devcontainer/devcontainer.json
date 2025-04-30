@@ -1,0 +1,9 @@
+  {
+    "name": "Docker Build Environment",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+      "docker-in-docker": "latest"
+    },
+    "postCreateCommand": "sudo service docker start"
+  }
+
