@@ -2,5 +2,5 @@
   "name": "Docker Build Environment",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {},
-  "postCreateCommand": "sudo apt update && sudo apt install socat"
+  "postCreateCommand": "sudo apt update && sudo apt install socat -y"
 }
